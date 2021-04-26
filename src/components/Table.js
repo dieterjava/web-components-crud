@@ -47,7 +47,8 @@ export default class Table extends HTMLElement {
       <thead>
         <tr>
           <th>Name</th>
-          <th>Job</th>
+          <th>Username</th>
+          <th>Phone</th>
           <th>Actions</th>
         </tr>
       </thead>
@@ -57,7 +58,8 @@ export default class Table extends HTMLElement {
             return `
             <tr>
               <td>${character.name}</td>
-              <td>${character.job}</td>
+              <td>${character.username}</td>
+              <td>${character.phone}</td>
               <td>
                 <button data-id="${character.id}" class="delete-btn" >Delete</button>
                 <button data-id="${character.id}" class="edit-btn" >Edit</button>

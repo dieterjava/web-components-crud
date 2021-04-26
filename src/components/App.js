@@ -52,7 +52,8 @@ export default class App extends HTMLElement {
       {
         id: (this.characters.length + 1).toString(),
         name: newCharacter.name,
-        job: newCharacter.job
+        username: newCharacter.username,
+        phone: newCharacter.phone
       }
     ];
   }
@@ -99,17 +100,23 @@ export default class App extends HTMLElement {
   }
 
   fetchInitialCharachters() {
-    const url = 'https://jsonplaceholder.typicode.com/users';
+//    const url = 'https://jsonplaceholder.typicode.com/users';
+//    const url = 'data/users.json';
+    const url = 'http://localhost:3000/users';
+    
+     
     fetch(url)
       .then(result => result.json())
       .then(result => {
         this.characters = result.map(char => ({
           id: char.id.toString(),
           name: char.name,
-          job: char.company.bs
+          username: char.username,
+          phone: char.phone
         }));
+        console.log(this.characters);
         this.updateTable(this.characters);
-      });
+      }); 
   }
 
   connectedCallback() {

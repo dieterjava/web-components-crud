@@ -20,31 +20,36 @@ export default class Form extends HTMLElement {
     event.preventDefault();
     const id = this.querySelector('#id');
     const name = this.querySelector('#name');
-    const job = this.querySelector('#job');
-    if (!name.value || !job.value) return;
+    const username = this.querySelector('#username');
+    const phone = this.querySelector('#phone');
+
+    if (!name.value || !username.value) return;
 
     const submitEvent = new CustomEvent('form-submitted', {
       detail: {
         id: id.value,
         name: name.value,
-        job: job.value
+        username: username.value,
+        phone: phone.value
       }
     });
     this.dispatchEvent(submitEvent);
     id.value = '';
     name.value = '';
-    job.value = '';
+    username.value = '';
+    phone.value = '';
   }
 
   onEdit(event) {
     this.form.innerHTML = this.formTemplate(
       event.detail.id,
       event.detail.name,
-      event.detail.job
+      event.detail.username,
+      event.detail.phone
     );
   }
 
-  formTemplate(id = '', name = '', job = '') {
+  formTemplate(id = '', name = '', username = '', phone = '') {
     return `
       <input
         type="text"
@@ -53,6 +58,7 @@ export default class Form extends HTMLElement {
         value="${id}"
         style="display: none"
       />
+      
       <label htmlFor="name">Name</label>
       <input
         type="text"
@@ -60,13 +66,22 @@ export default class Form extends HTMLElement {
         id="name"
         value="${name}"
         />
-        <label htmlFor="job">Job</label>
+
+        <label htmlFor="username">Username</label>
         <input
         type="text"
-        name="job"
-        id="job"
-        value="${job}"
+        name="username"
+        id="username"
+        value="${username}"
       />
+
+      <label htmlFor="username">Phone</label>
+      <input
+      type="text"
+      name="phone"
+      id="phone"
+      value="${phone}"
+    />    
       <input id="submit" type="submit" value="Submit" />
     `;
   }
