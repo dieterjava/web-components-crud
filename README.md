@@ -11,8 +11,8 @@ Done:
 1. Add json-server with users.json
 npm install -g json-server
 https://github.com/typicode/json-server
-cd src
-cd data 
+cd src <br>
+cd data <br>
 json-server --watch users.json
 http://localhost:3000/users
 
@@ -29,5 +29,5 @@ Therefore this example is quite complicate for usage in generating web apps from
 
 See the following URLs for better examples
 
-https://github.com/AdamBien/bce.design
+https://github.com/AdamBien/bce.design <br>
 https://github.com/AdamBien/webcomponents-with-redux.training
