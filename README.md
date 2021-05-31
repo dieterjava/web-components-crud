@@ -25,7 +25,7 @@ Good example!!!!
 But there are even some better ones using lit-html templates.
 
 Not so good here: Adding a new field needs changes in 17 places in the code.
-Therefore quite complicate for generating web apps from database schema.
+Therefore this example is quite complicate for usage in generating web apps from database schema.
 
 See the following URLs for better examples
 
