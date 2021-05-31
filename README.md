@@ -11,6 +11,7 @@ Done:
 1. Add json-server with users.json
 npm install -g json-server
 https://github.com/typicode/json-server
+cd src
 cd data 
 json-server --watch users.json
 http://localhost:3000/users
