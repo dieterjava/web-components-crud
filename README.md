@@ -1,5 +1,9 @@
 # Web Components CRUD App
 
+See:
+https://github.com/dieterjava/web-components-crud
+forked from https://github.com/userhooke/web-components-crud
+
 Simple demo app with CRUD operations with web components.<br>
 This is to explore the framework-free UI development based on Web Components and custom events.<br>
 
@@ -11,8 +15,7 @@ Done:<br>
 1. Add json-server with users.json<br>
 npm install -g json-server<br>
 https://github.com/typicode/json-server<br>
-cd src <br>
-cd data <br>
+cd src\data <br>
 json-server --watch db.json<br>
 http://localhost:3000/users<br>
 <br>
