@@ -2,7 +2,6 @@
 
 See:
 https://github.com/dieterjava/web-components-crud
-forked from https://github.com/userhooke/web-components-crud
 
 Simple demo app with CRUD operations with web components.<br>
 This is to explore the framework-free UI development based on Web Components and custom events.<br>
