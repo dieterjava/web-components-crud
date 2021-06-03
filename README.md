@@ -13,7 +13,7 @@ npm install -g json-server<br>
 https://github.com/typicode/json-server<br>
 cd src <br>
 cd data <br>
-json-server --watch users.json<br>
+json-server --watch db.json<br>
 http://localhost:3000/users<br>
 <br>
 To Dos:<br>
